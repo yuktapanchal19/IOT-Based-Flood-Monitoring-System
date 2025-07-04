@@ -1,0 +1,825 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--{% load static %}-->
+<!--<head>-->
+
+<!--  <meta charset="utf-8">-->
+<!--  <meta content="width=device-width, initial-scale=1.0" name="viewport">-->
+
+<!--  <title>Dashboard - NiceAdmin Bootstrap Template</title>-->
+<!--  <meta content="" name="description">-->
+<!--  <meta content="" name="keywords">-->
+
+<!--  &lt;!&ndash; Favicons &ndash;&gt;-->
+<!--  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">-->
+<!--  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">-->
+
+<!--  &lt;!&ndash; Google Fonts &ndash;&gt;-->
+<!--  <link href="{% static 'https://fonts.gstatic.com' %}" rel="preconnect">-->
+<!--  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">-->
+
+<!--  &lt;!&ndash; Vendor CSS Files &ndash;&gt;-->
+<!--  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">-->
+<!--  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">-->
+<!--  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">-->
+<!--  <link href="{% static 'assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">-->
+<!--  <link href="{% static 'assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">-->
+<!--  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">-->
+<!--  <link href="{% static 'assets/vendor/simple-datatables/style.css' %}" rel="stylesheet">-->
+
+<!--  &lt;!&ndash; Template Main CSS File &ndash;&gt;-->
+<!--  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">-->
+
+<!--  &lt;!&ndash; =======================================================-->
+<!--  * Template Name: NiceAdmin - v2.5.0-->
+<!--  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/-->
+<!--  * Author: BootstrapMade.com-->
+<!--  * License: https://bootstrapmade.com/license/-->
+<!--  ======================================================== &ndash;&gt;-->
+
+
+<!--  <meta charset="utf-8">-->
+<!--  &lt;!&ndash; ...other meta tags and links &ndash;&gt;-->
+
+<!--  <style>-->
+<!--    body {-->
+<!--      background-image: url("{% static 'assets/img/flood.jpg' %}");-->
+<!--      background-repeat: no-repeat;-->
+<!--      background-size: cover;-->
+<!--     font-weight: bolder;-->
+<!--    color: brown;-->
+<!--    }-->
+
+<!--  </style>-->
+<!--</head>-->
+
+<!--<body>-->
+
+<!--  &lt;!&ndash; ======= Header ======= &ndash;&gt;-->
+<!--  <header id="header" class="header fixed-top d-flex align-items-center">-->
+
+<!--    <div class="d-flex align-items-center justify-content-between">-->
+<!--      <a href="{% url 'dashboard' %}" class="logo d-flex align-items-center">-->
+<!--        <img src="{% static 'assets/img/logo.png' %}" alt="">-->
+<!--        <span class="d-none d-lg-block">FloodWarn</span>-->
+<!--      </a>-->
+
+<!--    </div>&lt;!&ndash; End Logo &ndash;&gt;-->
+
+
+<!--  </header>&lt;!&ndash; End Header &ndash;&gt;-->
+<!-- &lt;!&ndash; ======= Sidebar ======= &ndash;&gt;-->
+
+<!--  <aside id="sidebar" class="sidebar">-->
+
+<!--    <ul class="sidebar-nav" id="sidebar-nav">-->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="index.html">-->
+<!--          <i class="bi bi-grid"></i>-->
+<!--          <span>Dashboard</span>-->
+<!--        </a>-->
+<!--      </li>&lt;!&ndash; End Dashboard Nav &ndash;&gt;-->
+
+<!--      <li class="nav-item collapsed">-->
+<!--        <a class="nav-link collapsed " data-bs-target="#components-nav" data-bs-toggle="collapse" href="{% url 'waterlevel' %}">-->
+<!--          <i class="bi bi-menu-button-wide"></i><span>Watelevel Sensor</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+
+<!--      </li>&lt;!&ndash; End Components Nav &ndash;&gt;-->
+
+<!--      <li class="nav-item ">-->
+<!--        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="{% url 'ultrasoniclevel' %}">-->
+<!--          <i class="bi bi-journal-text"></i><span>Ultrasonic Sensor</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+
+<!--      </li>&lt;!&ndash; End Forms Nav &ndash;&gt;-->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="{% url 'raindrop' %}">-->
+<!--          <i class="bi bi-layout-text-window-reverse"></i><span>Raindrop Sensor</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+
+<!--      </li>&lt;!&ndash; End Tables Nav &ndash;&gt;-->
+
+
+<!--      <li class="nav-heading">Pages</li>-->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="users-profile.html">-->
+<!--          <i class="bi bi-person"></i>-->
+<!--          <span>Profile</span>-->
+<!--        </a>-->
+<!--      </li>&lt;!&ndash; End Profile Page Nav &ndash;&gt;-->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="pages-faq.html">-->
+<!--          <i class="bi bi-question-circle"></i>-->
+<!--          <span>F.A.Q</span>-->
+<!--        </a>-->
+<!--      </li>&lt;!&ndash; End F.A.Q Page Nav &ndash;&gt;-->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link " href="#">-->
+<!--          <i class="bi bi-envelope"></i>-->
+<!--          <span>Contact</span>-->
+<!--        </a>-->
+<!--      </li>&lt;!&ndash; End Contact Page Nav &ndash;&gt;-->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="{% url 'register' %}">-->
+<!--          <i class="bi bi-card-list"></i>-->
+<!--          <span>Register</span>-->
+<!--        </a>-->
+<!--      </li>&lt;!&ndash; End Register Page Nav &ndash;&gt;-->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="{% url 'login' %}">-->
+<!--          <i class="bi bi-box-arrow-in-right"></i>-->
+<!--          <span>Login</span>-->
+<!--        </a>-->
+<!--      </li>&lt;!&ndash; End Login Page Nav &ndash;&gt;-->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="{% url 'error' %}">-->
+<!--          <i class="bi bi-dash-circle"></i>-->
+<!--          <span>Error 404</span>-->
+<!--        </a>-->
+<!--      </li>&lt;!&ndash; End Error 404 Page Nav &ndash;&gt;-->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="{% url 'logout' %}">-->
+<!--          <i class="bi bi-file-earmark"></i>-->
+<!--          <span>Log Out</span>-->
+<!--        </a>-->
+<!--      </li>&lt;!&ndash; End Blank Page Nav &ndash;&gt;-->
+
+<!--    </ul>-->
+
+<!--  </aside>&lt;!&ndash; End Sidebar&ndash;&gt;-->
+
+
+
+
+<!--  <main id="main" class="main">-->
+
+<!--&lt;!&ndash;    <div class="pagetitle">&ndash;&gt;-->
+<!--    <h1><span class="d-none d-lg-block">Dashboard</span></h1>-->
+
+<!--&lt;!&ndash;    </div>&lt;!&ndash; End Page Title &ndash;&gt;&ndash;&gt;-->
+
+
+<!--    <section class="section dashboard">-->
+<!--      <div class="row">-->
+
+<!--        &lt;!&ndash; Left side columns &ndash;&gt;-->
+<!--        <div class="col-lg-8">-->
+<!--          <div class="row">-->
+<!--            <h2> Welcome, {{ request.session.name }}</h2>-->
+
+
+<!--&lt;!&ndash;            &lt;!&ndash; Sales Card &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-xxl-4 col-md-6">&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="card info-card sales-card">&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;                <div class="card-body">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <h5 class="card-title">RainfallData<span>|Latest </span></h5>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <i class="bi bi-cart"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="ps-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <h6>145</h6>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&lt;!&ndash; End Sales Card &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;            &lt;!&ndash; Revenue Card &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-xxl-4 col-md-6">&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="card info-card revenue-card">&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;                <div class="card-body">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <h3 class="card-title"> WaterlevelData<span>|Latest</span></h3>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                  <div class="d-flex align-items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <i class="bi bi-currency-dollar"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="ps-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                      <h6>$3,264</h6>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&lt;!&ndash; End Revenue Card &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;              Customers Card&ndash;&gt;-->
+<!--            <div class="col-xxl-4 col-xl-12">-->
+
+<!--              <div class="card info-card customers-card">-->
+
+<!--                <div class="card-body">-->
+<!--                  <h5 class="card-title">Waterlevel Sensor</h5>-->
+
+<!--                  <div class="d-flex align-items-center">-->
+<!--                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">-->
+<!--                      <i class="bi bi-people"></i>-->
+<!--                    </div>-->
+<!--                    <div class="ps-3">-->
+<!--                      <h6>1244</h6>-->
+<!--                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>-->
+
+<!--                    </div>-->
+<!--                  </div>-->
+
+<!--                </div>-->
+<!--              </div>-->
+
+<!--            </div>&lt;!&ndash; End Customers Card &ndash;&gt;-->
+
+<!--             &lt;!&ndash; Customers Card &ndash;&gt;-->
+<!--            <div class="col-xxl-4 col-xl-12">-->
+
+<!--              <div class="card info-card customers-card">-->
+
+<!--                <div class="card-body">-->
+<!--                  <h5 class="card-title">Ultrasonic Sensor</h5>-->
+
+<!--                  <div class="d-flex align-items-center">-->
+<!--                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">-->
+<!--                      <i class="bi bi-people"></i>-->
+<!--                    </div>-->
+<!--                    <div class="ps-3">-->
+<!--                      <h6>1244</h6>-->
+<!--                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>-->
+
+<!--                    </div>-->
+<!--                  </div>-->
+
+<!--                </div>-->
+<!--              </div>-->
+
+<!--            </div>&lt;!&ndash; End Customers Card &ndash;&gt;-->
+
+
+
+<!--            &lt;!&ndash; Customers Card &ndash;&gt;-->
+<!--            <div class="col-xxl-4 col-xl-12">-->
+
+<!--              <div class="card info-card customers-card">-->
+
+<!--                <div class="card-body">-->
+<!--                  <h5 class="card-title">Rainfall Sensor</h5>-->
+
+<!--                  <div class="d-flex align-items-center">-->
+<!--                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">-->
+<!--                      <i class="bi bi-people"></i>-->
+<!--                    </div>-->
+<!--                    <div class="ps-3">-->
+<!--                      <h6>1244</h6>-->
+<!--                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>-->
+
+<!--                    </div>-->
+<!--                  </div>-->
+
+<!--                </div>-->
+<!--              </div>-->
+
+<!--            </div>&lt;!&ndash; End Customers Card &ndash;&gt;-->
+<!--             <a href="/logout">logout</a>-->
+
+
+
+
+
+
+
+
+
+
+
+<!--        </div>&lt;!&ndash; End Left side columns &ndash;&gt;-->
+
+
+<!--              <script>-->
+<!--                document.addEventListener("DOMContentLoaded", () => {-->
+<!--                  var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({-->
+<!--                    legend: {-->
+<!--                      data: ['Allocated Budget', 'Actual Spending']-->
+<!--                    },-->
+<!--                    radar: {-->
+<!--                      // shape: 'circle',-->
+<!--                      indicator: [{-->
+<!--                          name: 'Sales',-->
+<!--                          max: 6500-->
+<!--                        },-->
+<!--                        {-->
+<!--                          name: 'Administration',-->
+<!--                          max: 16000-->
+<!--                        },-->
+<!--                        {-->
+<!--                          name: 'Information Technology',-->
+<!--                          max: 30000-->
+<!--                        },-->
+<!--                        {-->
+<!--                          name: 'Customer Support',-->
+<!--                          max: 38000-->
+<!--                        },-->
+<!--                        {-->
+<!--                          name: 'Development',-->
+<!--                          max: 52000-->
+<!--                        },-->
+<!--                        {-->
+<!--                          name: 'Marketing',-->
+<!--                          max: 25000-->
+<!--                        }-->
+<!--                      ]-->
+<!--                    },-->
+<!--                    series: [{-->
+<!--                      name: 'Budget vs spending',-->
+<!--                      type: 'radar',-->
+<!--                      data: [{-->
+<!--                          value: [4200, 3000, 20000, 35000, 50000, 18000],-->
+<!--                          name: 'Allocated Budget'-->
+<!--                        },-->
+<!--                        {-->
+<!--                          value: [5000, 14000, 28000, 26000, 42000, 21000],-->
+<!--                          name: 'Actual Spending'-->
+<!--                        }-->
+<!--                      ]-->
+<!--                    }]-->
+<!--                  });-->
+<!--                });-->
+<!--              </script>-->
+
+<!--            </div>-->
+<!--          </div>&lt;!&ndash; End Budget Report &ndash;&gt;-->
+
+
+<!--    </section>-->
+
+<!--  </main>&lt;!&ndash; End #main &ndash;&gt;-->
+
+<!--  &lt;!&ndash; ======= Footer ======= &ndash;&gt;-->
+
+
+<!--  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>-->
+
+<!--  &lt;!&ndash; Vendor JS Files &ndash;&gt;-->
+<!--  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>-->
+<!--  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<!--  <script src="assets/vendor/chart.js/chart.umd.js"></script>-->
+<!--  <script src="assets/vendor/echarts/echarts.min.js"></script>-->
+<!--  <script src="assets/vendor/quill/quill.min.js"></script>-->
+<!--  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>-->
+<!--  <script src="assets/vendor/tinymce/tinymce.min.js"></script>-->
+<!--  <script src="assets/vendor/php-email-form/validate.js"></script>-->
+
+<!--  &lt;!&ndash; Template Main JS File &ndash;&gt;-->
+<!--  <script src="assets/js/main.js"></script>-->
+
+<!--</body>-->
+
+<!--</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tables / General - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="{ static 'https://fonts.gstatic.com' }" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{ static 'assets/vendor/bootstrap/css/bootstrap.min.css' }" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.snow.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/quill/quill.bubble.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/simple-datatables/style.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.5.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+
+
+  <style>
+    body {
+
+      background-repeat: no-repeat;
+      background-size: cover;
+     font-weight: bolder;
+
+
+    }
+
+  .custom-image {
+    width: 150px;
+    height: 100px;
+  }
+
+
+  </style>
+
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+   <div class="d-flex align-items-center justify-content-between">
+      <a href="{% url 'dashboard' %}" class="logo d-flex align-items-center">
+        <img src="{% static 'assets/img/logo.png' %}" alt="">
+        <span class="d-none d-lg-block">FloodWarn</span>
+      </a>
+
+    </div><!-- End Logo -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="#">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item collapsed">
+        <a class="nav-link collapsed " data-bs-target="#components-nav" data-bs-toggle="collapse" href="{% url 'waterlevel' %}">
+          <i class="bi bi-menu-button-wide"></i><span>Watelevel Sensor</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item ">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="{% url 'ultrasoniclevel' %}">
+          <i class="bi bi-journal-text"></i><span>Ultrasonic Sensor</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " data-bs-target="#tables-nav" data-bs-toggle="collapse" href="{% url 'raindrop' %}">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Raindrop Sensor</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+
+      </li><!-- End Tables Nav -->
+
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " href="{% url 'contactpage' %}">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'register' %}">
+          <i class="bi bi-card-list"></i>
+          <span>Register</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'login' %}">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'error' %}">
+          <i class="bi bi-dash-circle"></i>
+          <span>Error 404</span>
+        </a>
+      </li><!-- End Error 404 Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{% url 'logout' %}">
+          <i class="bi bi-file-earmark"></i>
+          <span>Log Out</span>
+        </a>
+      </li><!-- End Blank Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+
+  <main id="main" class="main">
+
+<!--    <div class="pagetitle">-->
+    <h1 style="color : brown;  border: none;
+     height: 50%;
+    width: 87%;
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.1);
+    outline: none;
+text-shadow: 2px 2px 4px #000000;"><span class="d-none d-lg-block">Dashboard</span></h1>
+
+<!--    </div>&lt;!&ndash; End Page Title &ndash;&gt;-->
+
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+            <h2 style="color : brown;  border: none;
+     height: 50%;
+    width: 87%;
+    border-radius: 30px;
+  text-shadow: 2px 2px 4px #000000;
+    font-size: 30px;
+    padding: 0 0 0 45px;
+    background: rgba(255,255,255,0.1);
+    outline: none;"> Welcome, {{ request.session.name }}</h2>
+
+
+
+
+
+            <!-- Sales Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+
+
+
+                <div class="card-body">
+                  <h5 class="card-title">RainfallData<span>|Latest </span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-cart"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{ dashboard.raindrop_value }}</h6>
+                      <span class="text-success small pt-1 fw-bold">{{ status1 }}</span> <span class="text-muted small pt-2 ps-1"></span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Sales Card -->
+
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+
+
+
+                <div class="card-body">
+                  <h3 class="card-title"> WaterlevelData<span>|Latest</span></h3>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{ dashboard.waterlevel_value }}</h6>
+                      <span class="text-success small pt-1 fw-bold">{{ status }}</span> <span class="text-muted small pt-2 ps-1"></span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+
+ <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+
+
+
+                <div class="card-body">
+                  <h3 class="card-title"> UltrasonicData<span>|Latest</span></h3>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{ dashboard.ultrasonic_value }}</h6>
+                      <span class="text-success small pt-1 fw-bold">{{ status2 }}</span> <span class="text-muted small pt-2 ps-1"></span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+
+
+
+
+
+
+
+           <div class="col-xxl-4 col-xl-12">
+  <div class="card info-card customers-card">
+    <div class="card-body">
+      <h5 class="card-title">Waterlevel Sensor</h5>
+      <div class="d-flex align-items-center">
+        <div class="custom-image">
+          <div>
+          <img src="{% static 'assets/img/Water-Level-Sensor.png' %}"  class="custom-image">
+        </div>
+        </div>
+        <div class="ps-3">
+          <span class="text-danger small pt-1 fw-bold">A water level sensor is a device designed to detect and measure the height or depth of water in a container or body of water.</span>
+          <span class="text-muted small pt-2 ps-1"> </span><br>
+        <span class="text-muted small pt-2 ps-1"> It provides information about the water level,allowing users to monitor and control water quantities effectively.</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+           <div class="col-xxl-4 col-xl-12">
+  <div class="card info-card customers-card">
+    <div class="card-body">
+      <h5 class="card-title">Rainfall Sensor</h5>
+      <div class="d-flex align-items-center">
+        <div class="custom-image">
+          <div>
+          <img src="{% static 'assets/img/Rain-Sensor.jpg' %}"  class="custom-image">
+        </div>
+        </div>
+        <div class="ps-3">
+          <span class="text-danger small pt-1 fw-bold">A rainfall sensor is a device used to measure and quantify the amount of rain that falls in a given area. </span>
+          <span class="text-muted small pt-2 ps-1"> </span><br>
+        <span class="text-muted small pt-2 ps-1">It provides data on precipitation levels, enabling the monitoring of rainfall patterns and intensity.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+           <div class="col-xxl-4 col-xl-12">
+  <div class="card info-card customers-card">
+    <div class="card-body">
+      <h5 class="card-title">Ultrasonic Sensor</h5>
+      <div class="d-flex align-items-center">
+        <div class="custom-image">
+          <div>
+          <img src="{% static 'assets/img/ultrasonic.png' %}"  class="custom-image">
+        </div>
+        </div>
+        <div class="ps-3">
+          <span class="text-danger small pt-1 fw-bold">An ultrasonic sensor is a device that uses high-frequency sound waves to detect objects and measure distances.</span>
+          <span class="text-muted small pt-2 ps-1"> </span><br>
+        <span class="text-muted small pt-2 ps-1"> It works by emitting ultrasonic pulses and then measuring the time it takes for the sound waves to reflect back.</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+             <a href="/logout">logout</a>
+
+
+
+
+
+
+
+
+
+
+
+        </div><!-- End Left side columns -->
+
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
+                    legend: {
+                      data: ['Allocated Budget', 'Actual Spending']
+                    },
+                    radar: {
+                      // shape: 'circle',
+                      indicator: [{
+                          name: 'Sales',
+                          max: 6500
+                        },
+                        {
+                          name: 'Administration',
+                          max: 16000
+                        },
+                        {
+                          name: 'Information Technology',
+                          max: 30000
+                        },
+                        {
+                          name: 'Customer Support',
+                          max: 38000
+                        },
+                        {
+                          name: 'Development',
+                          max: 52000
+                        },
+                        {
+                          name: 'Marketing',
+                          max: 25000
+                        }
+                      ]
+                    },
+                    series: [{
+                      name: 'Budget vs spending',
+                      type: 'radar',
+                      data: [{
+                          value: [4200, 3000, 20000, 35000, 50000, 18000],
+                          name: 'Allocated Budget'
+                        },
+                        {
+                          value: [5000, 14000, 28000, 26000, 42000, 21000],
+                          name: 'Actual Spending'
+                        }
+                      ]
+                    }]
+                  });
+                });
+              </script>
+
+            </div>
+          </div><!-- End Budget Report -->
+
+
+    </section>
+
+  </main><!-- End #main -->
+
+
+
+
+
+
+  <!-- ======= Footer ======= -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/apexcharts/apexcharts.min.js' %}"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
